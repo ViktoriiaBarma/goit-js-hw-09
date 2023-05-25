@@ -2,7 +2,7 @@ import flatpickr from 'flatpickr';
 import 'flatpickr/dist/flatpickr.min.css';
 import { Notify } from 'notiflix/build/notiflix-notify-aio';
 
-const TIMER_DELAY = 1000;
+const DELAY = 1000;
 let intervalId = null;
 let selectedDate = null;
 let currentDate = null;
@@ -61,7 +61,7 @@ function timerStart() {
       remainingTime = Math.floor(selectedDate - currentDate);
       convertMs(remainingTime);
     }
-  }, TIMER_DELAY);
+  }, DELAY);
 }
 
 function createMarkup({ days, hours, minutes, seconds }) {
